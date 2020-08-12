@@ -4,6 +4,8 @@ var bodyParser 	= require('body-parser');
 var admin  = require('./controllers/admin');
 var staff= require('./controllers/staff');
 var addStaff= require('./controllers/addStaff');
+var doctorList= require('./controllers/doctorList');
+var userList= require('./controllers/userList');
 var login = require('./controllers/login');
 var logout =require('./controllers/logout');
 var coockieParser=require('cookie-parser');
@@ -44,6 +46,8 @@ app.use('/js',express.static('assets/js'));
 app.use('/logout',logout);
 app.use('/staff',staff);
 app.use('/addStaff',addStaff);
+app.use('/doctorList',doctorList);
+app.use('/userList',userList);
 app.use('/login',login);
 app.use('/admin',admin);
 
