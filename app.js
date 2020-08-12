@@ -2,7 +2,8 @@ var express 	= require('express');
 var exSession 	= require('express-session');
 var bodyParser 	= require('body-parser');
 var admin  = require('./controllers/admin');
-//var registration= require('./controllers/registration');
+var staff= require('./controllers/staff');
+var addStaff= require('./controllers/addStaff');
 var login = require('./controllers/login');
 var logout =require('./controllers/logout');
 var coockieParser=require('cookie-parser');
@@ -41,7 +42,8 @@ app.use('/js',express.static('assets/js'));
 //app.use('/patient',patient);
 
 app.use('/logout',logout);
-//app.use('/registration',registration);
+app.use('/staff',staff);
+app.use('/addStaff',addStaff);
 app.use('/login',login);
 app.use('/admin',admin);
 

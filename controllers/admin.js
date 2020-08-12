@@ -13,6 +13,7 @@ router.get('/',function (req,res){
                 console.log(req.session.adminId);
                 result[0].username=req.session.username;
                 result[0].amount=results.ammount;
+                console.log(result);
                 res.render('admin/index',result[0]);
             });
 
@@ -28,7 +29,7 @@ router.post('/', function (req,res){
     res.send("Under construction");
 });
 
-router.get('/settings',function (req,res){
+router.get('/addStaff',function (req,res){
     if(req.session.username!=null){
         adminModel.get(req.session.user_id,function (result){
             var admin=result[0];
@@ -36,7 +37,7 @@ router.get('/settings',function (req,res){
             admin.password=req.session.password;
             console.log(admin);
 
-            res.render('admin/settings',admin);
+            res.render('/admin/staff/addStaff',admin);
         })
     }
     else {
