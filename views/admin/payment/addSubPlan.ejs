@@ -52,33 +52,38 @@
         <div class="col-12 col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h3>Staff Registration</h3>
-                    <form method="post" action="/addStaff">
+                    <h3>New Subscription Plan</h3>
+                    <form method="post" action="/addSubPlan">
                         <div class="row">
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="username"><strong>Username:</strong></label>
-                                    <input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+                                    <label for="name"><strong>Plan name:</strong></label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name"/>
                                 </div>
                             </div>
 
                             <div class="col-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="password"><strong>Password:</strong></label>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+                                    <label for="duration"><strong>Duration(In days):</strong></label>
+                                    <input type="number" min="1" class="form-control" name="duration" id="duration" placeholder="Duration"/>
+                                </div>
+                            </div>
+                        
+                        <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="features"><strong>Features:</strong></label>
+                                    <textarea class="form-control" name="features" id="features" placeholder="Features" rows="5"></textarea>
+                                </div>
+                            </div>
+                        
+                        <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <label for="price"><strong>Price(In taka):</strong></label>
+                                    <input type="text" class="form-control" name="price" id="price" placeholder="Price"/>
                                 </div>
                             </div>
                         </div>
-                            <div class="col-12 col-md-3">
-                                <div class="form-group">
-                                    <label for="status"><strong>Status:</strong></label>
-                                    <select class="form-control" name="status" id="status">
-                                        <option>Staff</option>
-                                    </select>
-                                </div>
-                            </div>
                             
-                        <div class="row">
                             <div class=" col-12">
                                 <input type="submit" class="btn btn-block btn-primary" value="Submit" id="submit"/>
                             </div>
